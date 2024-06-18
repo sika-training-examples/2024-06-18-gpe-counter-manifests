@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
-  annotation:
-    app.openshift.io/connects-to: [{"apiVersion":"apps/v1","kind":"StatefulSet","name":"redis"}]
+  annotations:
+    app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"StatefulSet","name":"redis"}]'
 spec:
   replicas: 4
   selector:
