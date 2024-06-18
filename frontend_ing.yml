@@ -4,8 +4,12 @@ metadata:
   name: frontend
 spec:
   ingressClassName: openshift-default
+  tls:
+    - hosts:
+        - frontend.gpe.sikademo.com
+      secretName: letsencrypt
   rules:
-  - host: counter-manifests-frontend.apps.okd0.sikademo.com
+  - host: frontend.gpe.sikademo.com
     http:
       paths:
       - path: /
